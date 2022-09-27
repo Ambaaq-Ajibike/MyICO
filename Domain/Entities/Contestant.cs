@@ -16,4 +16,15 @@ public class Contestant : BaseEntity
         Scores = new HashSet<Score>();
         ContestantGames = new HashSet<ContestantGame>();
     }
+    public Contestant UpdateProfile(string name, string mail)
+    {
+        Name = name;
+        Email = mail;
+        return this;
+    }
+    public Contestant ChangePassword(string password)
+    {
+        Password = password;
+        return this;
+    }
 }
