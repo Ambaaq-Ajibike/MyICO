@@ -14,15 +14,19 @@ public class Contestant : BaseEntity
         Password = password;
         Scores = new HashSet<Score>();
     }
-    public Contestant UpdateProfile(string name, string mail)
+    public Contestant()
     {
-        Name = name;
-        Email = mail;
-        return this;
+        
     }
-    public Contestant ChangePassword(string password)
+    public Contestant UpdateProfile(string name, string mail, Contestant contestant)
     {
-        Password = password;
-        return this;
+        contestant.Name = name;
+        contestant.Email = mail;
+        return contestant;
+    }
+    public Contestant ChangePassword(string password, Contestant contestant)
+    {
+        contestant.Password = password;
+        return contestant;
     }
 }

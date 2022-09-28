@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "coa7CEXUA1IAl8zTvVRIEXjegDW0qtvAFpS48cdSIdkDzo+NzBjsPpA1vGc8ID9vYnr+AyvUJzHvFd/m+6OTxg==",
+  "dgSpecHash": "HkiEEbljyS2mjh6BMUTT+cDnRfPRqXIzmzAG7J8nh+p7X1qIwEKg/OuIHrGm1AsvNYRZx+IOmepuzWYPO6/B8w==",
   "success": true,
   "projectFilePath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
