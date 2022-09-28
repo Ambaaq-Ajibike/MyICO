@@ -1,5 +1,4 @@
 using Application.Features.ContestantService.Commands.RegisterContestant.Dto;
-using MediatR;
 
 namespace Application.Features.ContestantService.Commands.RegisterContestant;
 
