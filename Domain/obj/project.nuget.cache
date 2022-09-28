@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zf1cUPTYAyshI5vNu0PJ2A2BXkW8FlprVvsWlO3GwjC85uqZKr1q58dar3q1GlVi4qh+B8ZZKFxbDBA0E2pKoA==",
+  "dgSpecHash": "bGepyHI+NU5Y7fROBxK0xs4ngyizwmNfaCCLeVfToZGEyOUOhgHkhXAHsmWRm6bo05dRl/RMIntWZeVv/ywhiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
+  "projectFilePath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

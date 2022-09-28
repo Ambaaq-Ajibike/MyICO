@@ -1,17 +1,88 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj": {}
+    "c:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
+    "c:\\Users\\user\\Desktop\\practice\\ICO\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\user\\Desktop\\practice\\ICO\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.3.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,14 +128,14 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj": {
+    "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\obj\\",
+        "outputPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -79,8 +150,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj"
+              "c:\\Users\\user\\Desktop\\practice\\ICO\\Application\\Application.csproj": {
+                "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Application\\Application.csproj"
+              },
+              "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj"
               }
             }
           }
@@ -124,14 +198,14 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj": {
+    "c:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "c:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj",
+        "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\obj\\",
+        "outputPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -146,8 +220,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj"
+              "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
