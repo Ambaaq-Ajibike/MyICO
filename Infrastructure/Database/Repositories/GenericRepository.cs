@@ -1,30 +1,62 @@
+using System.Collections.Generic;
+using System.Data;
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using MySqlConnector;
 
 namespace Infrastructure.Database.Repositories;
 
 public class GenericRepository<T> : IRepository<T> where T : BaseEntity
 {
+    private readonly IConfiguration _config;
+    private readonly ApplicationContext _context;
+
+    public GenericRepository(IConfiguration config, ApplicationContext context)
+    {
+        _config = config;
+         _context = context;
+    }
     public async Task<T> Create(T entity)
     {
-        throw new NotImplementedException();
+       await _context.Set<T>().AddAsync(entity);
+       return entity;
     }
 
-    public async Task<T> Get(System.Linq.Expressions.Expression<Func<T, bool>> expression)
+    public async Task<T> Get(string query)
     {
-        throw new NotImplementedException();
+        using (var db = new MySqlConnection(_config.GetConnectionString("ICOConnection")))
+        {
+            var g = await db.QueryFirstOrDefaultAsync<T>(query);
+            return g;
+        }
+        
     }
 
-    public async Task<T> GetAll()
+    public async Task<IEnumerable<T>> GetAll(string query)
     {
-        throw new NotImplementedException();
+        using (var db = new MySqlConnection(_config.GetConnectionString("ICOConnection")))
+        {
+            var g = await db.QueryAsync<T>(query);
+            return g;
+        }
     }
 
-    public async Task<T> GetAllByExpression(System.Linq.Expressions.Expression<Func<T, bool>> expression)
+    public async Task<IEnumerable<T>> GetAllByExpression(string query)
     {
-        throw new NotImplementedException();
+        using (var db = new MySqlConnection(_config.GetConnectionString("ICOConnection")))
+        {
+            var g = await db.QueryAsync<T>(query);
+            return g;
+        }
     }
 
     public async Task<T> Update(T entity)
     {
-        throw new NotImplementedException();
+         _context.Set<T>().Update(entity);
+         return entity;
+    }
+    public async void SaveDbChanges()
+    {
+        await _context.SaveChangesAsync();
     }
 }

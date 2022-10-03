@@ -9,9 +9,10 @@ public interface IRepository<T> where T : BaseEntity
 
     Task<T> Update(T entity);
 
-    Task<T> Get(Expression<Func<T, bool>> expression);
+    Task<T> Get(string query);
 
-    Task<T> GetAll();
+    Task<IEnumerable<T>> GetAll(string query);
     
-    Task<T> GetAllByExpression(Expression<Func<T, bool>> expression);
+    Task<IEnumerable<T>> GetAllByExpression(string query);
+    void SaveDbChanges();
 }

@@ -13,7 +13,7 @@ public class GetContestantInformationRequestHandler : IRequestHandler<GetContest
 
     public async Task<ResponseModel> Handle(GetContestantInformationRequest request, CancellationToken cancellationToken)
     {
-        var contestant = await _contestantRepository.Get(x => x.Id == request.id);
+        var contestant = await _contestantRepository.GetAllContestantInformation(request.id);
         if(contestant == null) throw new CustomException("Contest not found", null, HttpStatusCode.NotFound);
         return contestant.Adapt<ResponseModel>();
     }
