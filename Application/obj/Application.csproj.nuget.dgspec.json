@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj"
+              "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj"
               }
             }
           }
@@ -61,14 +61,14 @@
         }
       }
     },
-    "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
+    "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

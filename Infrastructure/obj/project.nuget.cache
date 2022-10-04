@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mhrSVXzZt30iZKzqQM49+e8Vb6jTKeT7qVoFxsoMtVKqGuU9RoomHsXuQF7Cf/03jIPs+QugCqMYtsCsC5OEIg==",
+  "dgSpecHash": "7Bt5VJai0FBSMkELndQpr3ZnpZhbXu6rw0xwJ7Sj8EbRBQtKWvxDjXNwIVdcwHA00nzPAnnkwyFKZMHM7BHk1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",

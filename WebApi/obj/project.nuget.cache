@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tSIhu8tryCr2/C1AKuYvBIfVb4VMo7minfJ8vlQ4lxGQ5p6BIk/okkN5yaimoyb/SDTAzQzi0S1d9mm3/+LUtw==",
+  "dgSpecHash": "QS+XZm3JtJlP5oG7RihmgbkEbsQFJjt4xw15n0LuOEPoYCMboLMYIGrdVatt6eyZEnHahvmfDZLFO5obzCgvAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj",
+  "projectFilePath": "c:\\Users\\user\\Desktop\\practice\\ICO\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",

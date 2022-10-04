@@ -51,8 +51,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj"
+            "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Domain\\Domain.csproj"
             }
           }
         }
