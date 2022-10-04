@@ -12,7 +12,7 @@ public ContestantInformationRequestHandler(IContestantRepository contestantRepos
 
     public async Task<ResponseModel> Handle(ContestantInformationRequest request, CancellationToken cancellationToken)
     {
-        var contestant = await _contestantRepository.Get($"SELECT * FROM Contestants WHERE Id = {request.ContestantId}");
+        var contestant = await _contestantRepository.Get(x => x.Id.Equals(request.ContestantId));
         if (contestant == null) throw new CustomException("Contest not found", null, HttpStatusCode.NotFound);
         return contestant.Adapt<ResponseModel>();
     }

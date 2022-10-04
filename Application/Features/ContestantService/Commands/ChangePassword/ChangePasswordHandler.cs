@@ -11,7 +11,7 @@ public class ChangePasswordHandler : IRequestHandler<ChangePasswordRequest, Base
 
     public async Task<BaseResponse> Handle(ChangePasswordRequest request, CancellationToken cancellationToken)
     {
-        var getContestant = await _contestantRepository.Get($"SELECT * FROM Contestants WHERE Id = {request.Id}");
+        var getContestant = await _contestantRepository.Get(x => x.Id.Equals(request.Id));
         if(getContestant == null) throw new CustomException("User not found", null, HttpStatusCode.NotFound);
 
        var contestant = new Contestant();

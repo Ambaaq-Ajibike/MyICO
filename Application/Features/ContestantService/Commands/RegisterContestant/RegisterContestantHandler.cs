@@ -18,7 +18,7 @@ public class RegisterContestantHandler : IRequestHandler<RegisterContestantReque
         var validator = new RegisterContestantValidator();
         var validate = await validator.ValidateAsync(request.Model);
         if(!validate.IsValid) throw new ValidationException(validate);
-        var cont = _contestantRepository.Get($"SELECT * FROM Contestants WHERE Email = {request.Model.email}");
+        var cont = _contestantRepository.Get(x => x.Email.Equals(request.Model.email));
         if(cont != null)throw new CustomException("User with the same email already exist", null, HttpStatusCode.BadRequest);
        var contestant = new Contestant(request.Model.name, request.Model.email, request.Model.password);
        await _contestantRepository.Create(contestant);

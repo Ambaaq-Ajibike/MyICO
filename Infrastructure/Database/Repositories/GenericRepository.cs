@@ -1,6 +1,5 @@
-using System.Collections.Generic;
-using System.Data;
-using Dapper;
+using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using MySqlConnector;
 
@@ -8,12 +7,10 @@ namespace Infrastructure.Database.Repositories;
 
 public class GenericRepository<T> : IRepository<T> where T : BaseEntity
 {
-    private readonly IConfiguration _config;
     private readonly ApplicationContext _context;
 
-    public GenericRepository(IConfiguration config, ApplicationContext context)
+    public GenericRepository(ApplicationContext context)
     {
-        _config = config;
          _context = context;
     }
     public async Task<T> Create(T entity)
@@ -22,32 +19,22 @@ public class GenericRepository<T> : IRepository<T> where T : BaseEntity
        return entity;
     }
 
-    public async Task<T> Get(string query)
+    public async Task<T> Get(Expression<Func<T, bool>> expression)
     {
-        using (var db = new MySqlConnection(_config.GetConnectionString("ICOConnection")))
-        {
-            var g = await db.QueryFirstOrDefaultAsync<T>(query);
-            return g;
-        }
-        
+        var entity = await _context.Set<T>().FirstOrDefaultAsync(expression);
+        return entity;
     }
 
-    public async Task<IEnumerable<T>> GetAll(string query)
+    public async Task<IEnumerable<T>> GetAll()
     {
-        using (var db = new MySqlConnection(_config.GetConnectionString("ICOConnection")))
-        {
-            var g = await db.QueryAsync<T>(query);
-            return g;
-        }
+        var entity = await _context.Set<T>().ToListAsync();
+        return entity;
     }
 
-    public async Task<IEnumerable<T>> GetAllByExpression(string query)
+    public async Task<IEnumerable<T>> GetAllByExpression(Expression<Func<T, bool>> expression)
     {
-        using (var db = new MySqlConnection(_config.GetConnectionString("ICOConnection")))
-        {
-            var g = await db.QueryAsync<T>(query);
-            return g;
-        }
+        var entity = await _context.Set<T>().Where(expression).ToListAsync();
+        return entity;
     }
 
     public async Task<T> Update(T entity)
