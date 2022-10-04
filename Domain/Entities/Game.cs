@@ -6,13 +6,13 @@ namespace Domain.Entities;
 public class Game : BaseEntity
 {
     public string Name{get; private set;}
-    public int CreatedBy{get; private set;}
+    public string CreatedBy{get; private set;}
     public int? EndedBy{get; private set;}
     public DateTime? EndedOn{get; private set; }
     public DateTime CreatedOn{get; private set; }
     public GameStatus GameStatus{ get; private set; }
     public ICollection<ContestantGame> ContestantGames{ get; private set; }
-    public Game(string name, int createdBy)
+    public Game(string name, string createdBy)
     {
         Name = name;
         CreatedBy = createdBy;
