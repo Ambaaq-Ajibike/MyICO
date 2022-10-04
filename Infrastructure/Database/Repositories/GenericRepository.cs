@@ -1,30 +1,49 @@
+using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using MySqlConnector;
 
 namespace Infrastructure.Database.Repositories;
 
 public class GenericRepository<T> : IRepository<T> where T : BaseEntity
 {
+    private readonly ApplicationContext _context;
+
+    public GenericRepository(ApplicationContext context)
+    {
+         _context = context;
+    }
     public async Task<T> Create(T entity)
     {
-        throw new NotImplementedException();
+       await _context.Set<T>().AddAsync(entity);
+       return entity;
     }
 
-    public async Task<T> Get(System.Linq.Expressions.Expression<Func<T, bool>> expression)
+    public async Task<T> Get(Expression<Func<T, bool>> expression)
     {
-        throw new NotImplementedException();
+        var entity = await _context.Set<T>().FirstOrDefaultAsync(expression);
+        return entity;
     }
 
-    public async Task<T> GetAll()
+    public async Task<IEnumerable<T>> GetAll()
     {
-        throw new NotImplementedException();
+        var entity = await _context.Set<T>().ToListAsync();
+        return entity;
     }
 
-    public async Task<T> GetAllByExpression(System.Linq.Expressions.Expression<Func<T, bool>> expression)
+    public async Task<IEnumerable<T>> GetAllByExpression(Expression<Func<T, bool>> expression)
     {
-        throw new NotImplementedException();
+        var entity = await _context.Set<T>().Where(expression).ToListAsync();
+        return entity;
     }
 
     public async Task<T> Update(T entity)
     {
-        throw new NotImplementedException();
+         _context.Set<T>().Update(entity);
+         return entity;
+    }
+    public async void SaveDbChanges()
+    {
+        await _context.SaveChangesAsync();
     }
 }

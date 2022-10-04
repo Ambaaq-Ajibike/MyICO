@@ -1,15 +1,20 @@
 
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using MySqlConnector;
+
 namespace Infrastructure.Database.Repositories;
 
 public class ContestRepository : GenericRepository<Contestant>, IContestantRepository
 {
-    public ContestRepository()
+    private readonly ApplicationContext _context;
+    public ContestRepository(ApplicationContext context) : base( context)
     {
-        
+        _context = context;
     }
-
-    public Task<Contestant> GetAllContestantInformation(int id)
+    public async Task<Contestant> GetAllContestantInformation(string id)
     {
-        throw new NotImplementedException();
+        var contestants = await _context.Contestants.Include(x => x.Scores).Include(x => x.ContestantGames).FirstOrDefaultAsync(x => x.Id == id);
+      return contestants;
     }
 }

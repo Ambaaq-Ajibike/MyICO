@@ -1,7 +1,4 @@
 
-
-
-
 using Application.Features.ContestantService.Commands.UpdateContestantProfile.Validator;
 
 namespace Application.Features.ContestantService.Commands.UpdateContestantProfile;
@@ -22,7 +19,7 @@ public class UpdateProfileRequestHandler : IRequestHandler<UpdateProfileRequest,
         var validate = await validator.ValidateAsync(request.UpdateModel);
         if(!validate.IsValid) throw new ValidationException(validate);
 
-        var getContestant = await _contestantRepository.Get(x => x.Id == request.UpdateModel.id);
+        var getContestant = await _contestantRepository.Get(x => x.Id.Equals(request.UpdateModel.id));
 
         if(getContestant == null) throw new CustomException("User not found", null, HttpStatusCode.NotFound);
 
