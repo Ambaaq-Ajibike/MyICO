@@ -2,7 +2,7 @@ using Mapster;
 
 namespace Application.Features.ContestantService.Queries.GetGamesByContestantId;
 
-public class GetGameByContestIdRequestHandler : IRequestHandler<GetGameByContestIdRequest, GameResponseModel>
+public sealed class GetGameByContestIdRequestHandler : IRequestHandler<GetGameByContestIdRequest, GameResponseModel>
 {
     private readonly IGameRepository _gameRepository;
 

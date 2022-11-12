@@ -6,7 +6,7 @@ using Mapster;
 
 namespace Application.Features.GameService.Queries.GetAllContestantsOnAGame
 {
-    public class AllContestantRequestHandler : IRequestHandler<AllContestantRequest, ResponseModel>
+    public sealed class AllContestantRequestHandler : IRequestHandler<AllContestantRequest, ResponseModel>
     {
         private readonly IGameRepository _gameRepository;
         public AllContestantRequestHandler(IGameRepository gameRepository)

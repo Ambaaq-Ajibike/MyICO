@@ -2,7 +2,7 @@ using Mapster;
 
 namespace Application.Features.ContestantService.Queries.GetContestantInformation;
 
-public class GetContestantInformationRequestHandler : IRequestHandler<GetContestantInformationRequest, ResponseModel>
+public sealed class GetContestantInformationRequestHandler : IRequestHandler<GetContestantInformationRequest, ResponseModel>
 {
     private readonly IContestantRepository _contestantRepository;
 

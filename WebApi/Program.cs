@@ -1,4 +1,7 @@
+using System.Reflection;
+using Application;
 using Infrastructure;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddingDbConfiguration(builder.Configuration);
+builder.Services.AddApplication();
+builder.Services.AddMediatR(typeof(Program).GetTypeInfo().Assembly);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

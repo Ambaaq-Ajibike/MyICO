@@ -3098,11 +3098,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
