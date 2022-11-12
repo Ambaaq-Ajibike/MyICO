@@ -7,12 +7,7 @@ namespace Infrastructure.Database.Repositories;
 
 public class GenericRepository<T> : IRepository<T> where T : BaseEntity
 {
-    private readonly ApplicationContext _context;
-
-    public GenericRepository(ApplicationContext context)
-    {
-         _context = context;
-    }
+    protected ApplicationContext _context;
     public async Task<T> Create(T entity)
     {
        await _context.Set<T>().AddAsync(entity);
@@ -42,8 +37,9 @@ public class GenericRepository<T> : IRepository<T> where T : BaseEntity
          _context.Set<T>().Update(entity);
          return entity;
     }
-    public async void SaveDbChanges()
+    public async Task<bool> SaveDbChanges()
     {
         await _context.SaveChangesAsync();
+        return true;
     }
 }

@@ -3,7 +3,7 @@ using Application.Features.ContestantService.Commands.UpdateContestantProfile.Va
 
 namespace Application.Features.ContestantService.Commands.UpdateContestantProfile;
 
-public class UpdateProfileRequestHandler : IRequestHandler<UpdateProfileRequest, BaseResponse>
+public sealed class UpdateProfileRequestHandler : IRequestHandler<UpdateProfileRequest, BaseResponse>
 {
     private readonly IContestantRepository _contestantRepository;
 
@@ -21,7 +21,7 @@ public class UpdateProfileRequestHandler : IRequestHandler<UpdateProfileRequest,
 
         var getContestant = await _contestantRepository.Get(x => x.Id.Equals(request.UpdateModel.id));
 
-        if(getContestant == null) throw new CustomException("User not found", null, HttpStatusCode.NotFound);
+        if(getContestant == null) return new BaseResponse("Contestant not found", false);
 
         var contestant = new Contestant();
 
@@ -29,6 +29,7 @@ public class UpdateProfileRequestHandler : IRequestHandler<UpdateProfileRequest,
 
        await _contestantRepository.Update(updateContestant);
 
+        await _contestantRepository.SaveDbChanges();
        return new BaseResponse("Profile Successfully updated", true);
     }
 }

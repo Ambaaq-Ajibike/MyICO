@@ -2,7 +2,7 @@ using Mapster;
 
 namespace Application.Features.GameService.Queries.GetGameInformation;
 
-public class GetGameRequestHandler : IRequestHandler<GetGameRequest, ResponseModel>
+public sealed class GetGameRequestHandler : IRequestHandler<GetGameRequest, ResponseModel>
 {
     private readonly IGameRepository _gameRepository;
 

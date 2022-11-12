@@ -5,7 +5,14 @@ C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\WebApi.deps.json
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\WebApi.runtimeconfig.json
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\WebApi.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\WebApi.pdb
+C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Humanizer.dll
+C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Mapster.dll
+C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Mapster.Core.dll
+C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\MediatR.dll
+C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -17,9 +24,11 @@ C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Pomelo.EntityFramewor
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Application.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Domain.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Infrastructure.dll
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Infrastructure.pdb
+C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Application.pdb
 C:\Users\user\Desktop\practice\ICO\WebApi\bin\Debug\net6.0\Domain.pdb
 C:\Users\user\Desktop\practice\ICO\WebApi\obj\Debug\net6.0\WebApi.csproj.AssemblyReference.cache
 C:\Users\user\Desktop\practice\ICO\WebApi\obj\Debug\net6.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig

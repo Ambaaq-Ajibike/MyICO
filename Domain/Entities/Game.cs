@@ -11,7 +11,7 @@ public class Game : BaseEntity
     public DateTime? EndedOn{get; private set; }
     public DateTime CreatedOn{get; private set; }
     public GameStatus GameStatus{ get; private set; }
-    public ICollection<ContestantGame> ContestantGames{ get; private set; }
+    public ICollection<ContestantGame> ContestantGames{ get; private set; } = new List<ContestantGame>();
     public Game(string name, string createdBy)
     {
         Name = name;

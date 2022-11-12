@@ -2,5 +2,5 @@ namespace Domain.Common;
 
 public class BaseEntity
 {
-    public string Id{ get; set; } = new Guid().ToString().Substring(0, 5);
+    public string Id{ get; set; } = Guid.NewGuid().ToString().Substring(0, 5);
 }

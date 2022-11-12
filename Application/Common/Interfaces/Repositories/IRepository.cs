@@ -14,5 +14,5 @@ public interface IRepository<T> where T : BaseEntity
     Task<IEnumerable<T>> GetAll();
     
     Task<IEnumerable<T>> GetAllByExpression(Expression<Func<T, bool>> expression);
-    void SaveDbChanges();
+    Task<bool> SaveDbChanges();
 }

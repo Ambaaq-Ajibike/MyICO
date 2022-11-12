@@ -1,6 +1,6 @@
 namespace Application.Features.ScoreService.Commands.AddScore;
 
-public class AddScoreRequestHandler : IRequestHandler<AddScoreRequest, BaseResponse>
+public sealed class AddScoreRequestHandler : IRequestHandler<AddScoreRequest, BaseResponse>
 {
     private readonly IScoreRepository _scoreRepository;
 

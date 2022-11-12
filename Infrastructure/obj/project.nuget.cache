@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TsRwPmmZ6dnfb/bYXDZdRIEfzaN5ia0kc69hUq07SbIawqOjovukeKnNnvXhvOF9k3ON66sShsX6hNfPQ9cwkA==",
+  "dgSpecHash": "g2iMAGZR5qGqhV1aBvN+r/VqJQ3T403IW6Xm9oMJG5wkXPmj7GeDjN5auKCbZwnvTVzpHxmBKJodx0+yAmc4TQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\practice\\ICO\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",

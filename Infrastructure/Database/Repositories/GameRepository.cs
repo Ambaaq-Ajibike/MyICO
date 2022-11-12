@@ -4,8 +4,7 @@ namespace Infrastructure.Database.Repositories;
 
 public class GameRepository : GenericRepository<Game>, IGameRepository
 {
-    private readonly ApplicationContext _context;
-    public GameRepository(ApplicationContext context) : base(context)
+    public GameRepository(ApplicationContext context)
     {
         _context = context;
     }

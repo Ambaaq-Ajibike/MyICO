@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220927082155_seedl")]
-    partial class seedl
+    [Migration("20221010230847_ICO")]
+    partial class ICO
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -65,8 +65,8 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
 
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime(6)");
@@ -76,6 +76,9 @@ namespace Infrastructure.Migrations
 
                     b.Property<DateTime?>("EndedOn")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<int>("GameStatus")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .HasColumnType("longtext");
@@ -96,6 +99,9 @@ namespace Infrastructure.Migrations
                     b.Property<string>("ContestantId")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("GameId")
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id");
 
                     b.ToTable("Scores");
@@ -104,7 +110,7 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.ContestantGame", b =>
                 {
                     b.HasOne("Domain.Entities.Contestant", "Contestant")
-                        .WithMany()
+                        .WithMany("ContestantGames")
                         .HasForeignKey("ContestantId");
 
                     b.HasOne("Domain.Entities.Game", "Game")
@@ -135,6 +141,8 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Contestant", b =>
                 {
+                    b.Navigation("ContestantGames");
+
                     b.Navigation("Scores");
                 });
 
